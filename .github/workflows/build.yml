@@ -11,3 +11,13 @@ jobs:
       - name: "Build the code"
         shell: pwsh
         run: dotnet build ./amazingcalculator.business/amazingcalculator.business.csproj 
+  
+   testcode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout test code"
+        uses: actions/checkout@v4
+      
+      - name: "Build test code"
+        shell: pwsh
+        run: dotnet build ./amazingcalculator.test/amazingcalculator.test.csproj 
