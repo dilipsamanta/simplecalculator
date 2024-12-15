@@ -31,7 +31,7 @@ jobs:
       needs: [buildcode, testcode]
       steps:
       - name: "Checkout code"
-        uses: actions/checkoutv4
+        uses: actions/checkout@v4
       
       - name: "Deploy code"
         shell: pwsh
