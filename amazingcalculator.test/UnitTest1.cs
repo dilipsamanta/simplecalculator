@@ -5,6 +5,7 @@ namespace amazingcalculator.test
         [Fact]
         public void Test1()
         {
+            Assert.Fail("Failed");
         }
     }
 }
