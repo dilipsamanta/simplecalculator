@@ -1,3 +1,4 @@
+repos:
 -   repo: https://github.com/thoughtworks/talisman
     rev: 'v1.32.0'
     hooks:
