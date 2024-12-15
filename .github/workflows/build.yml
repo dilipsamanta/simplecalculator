@@ -1,5 +1,8 @@
 name: "build amazing calculator"
-on: push
+on: 
+  push:
+    branches:
+    - "main"
 
 jobs:
    buildcode:
