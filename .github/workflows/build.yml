@@ -13,7 +13,7 @@ jobs:
         run: dotnet build ./amazingcalculator.business/amazingcalculator.business.csproj 
   
    testcode:
-    dependsOn: buildcode
+    needs: buildcode
     runs-on: ubuntu-latest
     steps:
       - name: "Checkout test code"
