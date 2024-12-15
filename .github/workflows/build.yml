@@ -1,0 +1,15 @@
+name: "build amazing calculator"
+
+on: 
+  push: main
+
+jobs:
+   buildcode:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Checkout sources"
+        uses: actions/checkout@v4
+      
+      - name: "Build the code"
+        shell: pwsh
+        run: dotnet build ./amazingcalculator.business/amazingcalculator.business.csproj 
