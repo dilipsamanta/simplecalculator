@@ -25,3 +25,15 @@ jobs:
       - name: "Test the code"
         shell: pwsh
         run: dotnet test ./amazingcalculator.test/amazingcalculator.test.csproj
+    
+   deploycode:
+      runs-on: ubuntu-latest
+      needs: [buildcode, testcode]
+      steps:
+      - name: "Checkout code"
+        uses: actions/checkoutv4
+      
+      - name: "Deploy code"
+        shell: pwsh
+        run: |
+          Write-Host "Code is deployed"
